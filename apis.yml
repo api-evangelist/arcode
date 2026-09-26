@@ -1,23 +1,60 @@
 aid: arcode
+
 name: Arcode
-description: 'Arcode is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Arcode Cloud Services is an emergent software firm specializing in enterprise application delivery, cloud development, mobile apps, and software curation. They partner with Salesforce and focus on high‑quality solutions, helping clients achieve their goals with innovative technology and a commitment to quality.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arcode/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Software
+- Cloud
+- Development
+- Services
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arcode-hosts.yml
+- type: Vendors
+  url: vendors/arcode-vendors.yml
+- type: DomainSecurity
+  url: security/arcode-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arcode
+  url: https://www.arcode.cloud
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: "Arcode provides cloud services but does not publish a developer program or public API documentation."
+  evidence:
+    - url: https://www.arcode.cloud
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
